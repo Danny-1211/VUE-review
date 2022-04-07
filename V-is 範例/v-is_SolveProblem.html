@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2>動態標籤實戰技巧</h2>
+       <table>
+         <thead>
+           <tr>
+             <th>標題</th>
+             <th>內文</th>
+           </tr>
+         </thead>
+         <tbody>
+           <table-row></table-row> <!--將元件放在 tbody ，由於 html 原始標籤為 tr 所以放入元件會在 table 外顯示-->
+           <tr v-is="'table-row'"></tr> <!-- 解決辦法 : 寫上 tr 標籤並用 v-is 放入元件-->
+           <!-- <tr v-is="'table-row'"></tr>-->
+         </tbody>
+       </table>
+      </div>
+</body>
+</html>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="v-is_SolveProblem.js"></script>
+<!--解決 html 原始標籤內放入元件，元件卻顯示在上方問題-->
