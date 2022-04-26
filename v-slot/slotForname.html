@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>具名插巢</title>
+</head>
+<body>
+    <div id="app">
+      <card>
+        <template v-slot:g1>
+          <p>第一段:v-slot name: g1</p>
+        </template>
+        <template v-slot:default>
+          <p>第二段:v-slot name: default (default 沒有 設定 name 名稱)</p>
+        </template>
+        <template v-slot:g3>
+          <p>第三段:v-slot name: g3</p>
+        </template>
+      </card>
+    </div>
+</body>
+<script src="https://unpkg.com/vue@3"></script>
+<script src="slotForname.js"></script>
+</html>
