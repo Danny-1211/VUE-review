@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <card></card>
+        <card2></card2>
+    </div>
+  <script type="text/x-template" id="Forcard2">
+    <div>
+      <h2>{{ item }}</h2>
+    </div>
+  </script>
+  <script type="text/x-template" id="Forcard">
+    <div>
+      <button type="button" @click="clickFromSent">click</button>
+    </div>
+  </script>
+</body>
+<script src="https://unpkg.com/vue@3" ></script>
+<script src="https://unpkg.com/mitt/dist/mitt.umd.js"></script>
+<script src="mittExample.js" type="module"></script>
+</html>
