@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teleport</title>
+</head>
+<body>
+    <div id="app">
+        <button type="button" @click="teleport">點擊後傳送</button>
+        <div id="teleportBefore">
+            <h2>傳送前區塊</h2>
+            <card ref="card"></card>
+        </div>
+        <div id="teleportAfter">
+            <h2>傳送後區塊</h2>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/vue@3"></script>
+<script src="teleportExample.js"></script>
+</html>
