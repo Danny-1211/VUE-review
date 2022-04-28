@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>propsForVmodel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <div id="app">
+        <h2>還沒有用 emit 做雙向綁定</h2>
+        <h3>父元件值並不會被子元件 input 修改</h3>
+        <p>父元件的值: {{ name }}</p>
+        <card v-model:text="name"></card>
+
+        <h2>使用 emit 做雙向綁定</h2>
+        <h3>父元件值可以被子元件 input 修改</h3>
+        <p>父元件的值: {{ name2 }}</p>
+        <card2 v-model:text2="name2"></card2>
+    </div>
+</body>
+<script type="text=x-template" id="card">
+    <div class="input-group flex-nowrap w-50">
+        <span class="input-group-text" id="addon-wrapping">card子元件</span>
+        <input type="text" class="form-control " placeholder="子元件props值" :value="text">
+    </div>
+</script>
+<script type="text=x-template" id="card2">
+    <div class="input-group flex-nowrap w-50">
+        <span class="input-group-text" id="addon-wrapping">card子元件</span>
+        <input type="text" class="form-control " placeholder="子元件props值" :value="text2" @input="$emit('update:text2',$event.target.value)">
+    </div>
+</script>
+<script src="https://unpkg.com/vue@3"></script>
+<script src="propsForVmodel.js"></script>
+</html>
