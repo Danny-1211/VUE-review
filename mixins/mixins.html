@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mixins</title>
+</head>
+<body>
+    <div id="app">
+      <h2>宣告多個 mixins</h2>
+        <p> mixins card 元件 : {{ cardid }}</p>
+        <p> mixins card2 元件 : {{ card2id }}</p>
+      <h2>同樣的 data 或 method 會被後面宣告的 mixins 覆蓋</h2>
+       <p> card 與 card2 元件同名資料 title 值:{{ title }} </p>
+       <p> card 與 card2 元件同名資料 content 值:{{ content }} </p>
+      <h2>觸發 mixins 混合元件的方法</h2>
+        <button type="button" @click="toggleCardMethod"> 點擊觸發 card 方法  </button>
+        <button type="button" @click="toggleCard2Method"> 點擊觸發 card2 方法 </button>
+    </div>
+</body>
+<script src="https://unpkg.com/vue@3"></script>
+<script src="mixins.js"></script>
+</html>
